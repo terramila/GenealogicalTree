@@ -137,7 +137,7 @@
                 System.out.println(ex.getMessage());
                 }  
 
-                System.out.println("Введите 1- дедушки; 2- бабушки; 3- папы; 4- мамы; 5- мальчики; 6- девочки.");
+                System.out.println("Enter 1- grandfathers; 2- grandmothers; 3- fathers; 4- mothers; 5- boys; 6- girls, 7- Ivanenkovi, 8-Fedoruki.");
                 Scanner scan = new Scanner(System.in);
                 int parametr = scan.nextInt();
                 scan.close();
@@ -160,31 +160,47 @@
                     }
                 }
             }
-                if(parametr == 3){
-                    for(int i=0; i<birthTimeList.size(); i++){
-                        if(birthTimeList.get(i) >= 1979 && birthTimeList.get(i) <= 2000 && genders.get(i) == "male"){
+            if(parametr == 3){
+                 for(int i=0; i<birthTimeList.size(); i++){
+                     if(birthTimeList.get(i) >= 1979 && birthTimeList.get(i) <= 2000 && genders.get(i) == "male"){
                         System.out.print("\n"+"Father"+": "+birthTimeList.get(i)+" year"+" "+surnameL.get(i)+" "+nameL.get(i));
-                        }
-                    }
-                }
-                if(parametr == 4){
-                    for(int i=0; i<birthTimeList.size(); i++){
-                        if(birthTimeList.get(i) >= 1979 && birthTimeList.get(i) <= 2000 && genders.get(i) == "female"){
+                     }
+                 }
+            }
+            if(parametr == 4){
+                  for(int i=0; i<birthTimeList.size(); i++){
+                     if(birthTimeList.get(i) >= 1979 && birthTimeList.get(i) <= 2000 && genders.get(i) == "female"){
                         System.out.print("\n"+"Mother"+": "+birthTimeList.get(i)+" year"+" "+surnameL.get(i)+" "+nameL.get(i));
-                        }
-                    }
-                }
-                if(parametr == 5){
-                    for(int i=0; i<birthTimeList.size(); i++){
-                        if(birthTimeList.get(i) >= 2001 && genders.get(i) == "male"){
+                     }
+                  }
+             }
+             if(parametr == 5){
+                  for(int i=0; i<birthTimeList.size(); i++){
+                     if(birthTimeList.get(i) >= 2001 && genders.get(i) == "male"){
                         System.out.print("\n"+"ChildBoy"+": "+birthTimeList.get(i)+" year"+" "+surnameL.get(i)+" "+nameL.get(i));
+                      }
+                   }
+              }
+              if(parametr == 6){
+                  for(int i=0; i<birthTimeList.size(); i++){
+                      if(birthTimeList.get(i) >= 2001 && genders.get(i) == "female"){
+                        System.out.print("\n"+"ChildGirl"+": "+birthTimeList.get(i)+" year"+" "+surnameL.get(i)+" "+nameL.get(i));
+                      }
+                  }
+              }
+              if(parametr == 7){
+                    System.out.print("Ivanenkovi: ");
+                    for(int i =0; i< birthTimeList.size();i++){
+                        if(surnameL.get(i)=="Ivanenko"){
+                        System.out.print("\n"+ surnameL.get(i)+" "+nameL.get(i)+" - "+birthTimeList.get(i)+"г.");
                         }
                     }
-                }
-                if(parametr == 6){
-                    for(int i=0; i<birthTimeList.size(); i++){
-                        if(birthTimeList.get(i) >= 2001 && genders.get(i) == "female"){
-                        System.out.print("\n"+"ChildGirl"+": "+birthTimeList.get(i)+" year"+" "+surnameL.get(i)+" "+nameL.get(i));
+               }
+               if(parametr == 8){
+                    System.out.print("Fedoruki: ");
+                    for(int i =0; i< birthTimeList.size();i++){
+                        if(surnameL.get(i)=="Fedoruk"){
+                        System.out.print("\n"+ surnameL.get(i)+" "+nameL.get(i)+" - "+birthTimeList.get(i)+"г.");
                         }
                     }
                 }
