@@ -45,6 +45,6 @@ public void setSurname(String surname) {
     @Override
 
     public String toString(){
-        return "\n"+birthTime+"г. "+surname+" "+name + "- "+gender+"";
+        return "\n"+getBirthTime()+"г. "+getSurname()+" "+getName() + "- "+gender+"";
         }
     }
