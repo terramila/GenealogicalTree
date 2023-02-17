@@ -1,10 +1,10 @@
 package GenealogicalTree;
 class Human {
     
-    public String surname;
-    public String name;
-    public String gender;
-    public Integer birthTime; 
+    private String surname;
+    private String name;
+    private String gender;
+    private Integer birthTime; 
 
 public Human(String surname,String name,String gender,Integer birthTime) 
 {
